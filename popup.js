@@ -22,20 +22,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setContent(res) {
-    resObj = res;
-    let content = "";
-
-    // reverse the sequence of the keys so the popup sequence matches that of the videos
-    let keys = Array.from(Object.keys(res)).reverse();
-
-    for (const index in keys) {
-      content += `<input type="checkbox" id=${keys[index].replace(/\s/g, '')} name=${keys[index]} value=2><label for=${keys[index]}> ${keys[index]}</label><br>`;
+    // set message
+    console.log("res", res);
+    if (res == "No RSS found" || res == "undefined") {
+      document.getElementById("loadScreen").innerHTML = "No videos found.";
+    } else {
+      resObj = res;
+      let content = "";
+  
+      // reverse the sequence of the keys so the popup sequence matches that of the videos
+      let keys = Object.keys(res).reverse();
+  
+      for (const index in keys) {
+        content += `<input type="checkbox" id=${keys[index].replace(/\s/g, '')} name=${keys[index]} value=2><label for=${keys[index]}> ${keys[index]}</label><br>`;
+      }
+      content += '<button id="submit" type="submit">Download Selected</button>';
+  
+      document.getElementById("loadScreen").innerHTML = "";
+      document.getElementById("checkList").innerHTML = content;
+      document.getElementById('submit').addEventListener('click', onSubmit, false)
     }
-    content += '<button id="submit" type="submit">Download Selected</button>';
 
-    document.getElementById("loadScreen").innerHTML = "";
-    document.getElementById("checkList").innerHTML = content;
-    document.getElementById('submit').addEventListener('click', onSubmit, false)
   }
 
 }, false)
