@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let content = '<div><form>';
 
     for (const key in res) {
-      content += `<input type="checkbox" id=${key} name=${key}><label for=${key}> ${res[key]}</label><br>`;
+      content += `<input type="checkbox" id=${key} name=${key}><label for=${key}> ${key}</label><br>`;
     }
 
     content += '<input type="submit" value="Submit"></form></div>';
