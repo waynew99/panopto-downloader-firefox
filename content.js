@@ -22,7 +22,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
         }
         // process RSS files
-        sendResponse(dict); //fill later
+        sendResponse(dict);
     }
 });
 
