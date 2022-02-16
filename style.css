@@ -1,3 +1,24 @@
 body {
-    background-color: white;
+    width: 175px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 6px;
+}
+
+.header {
+    margin: 5px;
+}
+
+#title {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.videoItem {
+    padding-right: 30px;
+    margin-bottom: 4px;
+}
+
+#submit {
+    margin-top: 8px;
 }

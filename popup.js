@@ -22,11 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setContent(res) {
-    // set message
-    console.log("res", res);
+    document.getElementById("loadScreen").innerHTML = "";
+
     if (res == "No RSS found" || res == "undefined") {
-      document.getElementById("loadScreen").innerHTML = "No videos found.";
-    } else {
+      document.getElementById("result").innerHTML = "<p>No videos found. <br>Please navigate to the Panopto folder page containing the videos that you want to download.</p>";
+    } 
+    
+    else {
       resObj = res;
       let content = "";
   
@@ -34,12 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let keys = Object.keys(res).reverse();
   
       for (const index in keys) {
-        content += `<input type="checkbox" id=${keys[index].replace(/\s/g, '')} name=${keys[index]} value=2><label for=${keys[index]}> ${keys[index]}</label><br>`;
+        content += `<div class="videoItem"><input type="checkbox" class="check" id=${keys[index].replace(/\s/g, '')} name=${keys[index]} value=2><label for=${keys[index]}> ${keys[index]}</label><br></div>`;
       }
-      content += '<button id="submit" type="submit">Download Selected</button>';
+      content += '<div id="buttonWrapper"><button id="submit" type="submit">Download Selected</button></div>';
   
-      document.getElementById("loadScreen").innerHTML = "";
-      document.getElementById("checkList").innerHTML = content;
+
+      document.getElementById("result").innerHTML = content;
       document.getElementById('submit').addEventListener('click', onSubmit, false)
     }
 
