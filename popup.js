@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       for (const index in keys) {
         content += `<div class="videoItem"><input type="checkbox" class="check" id=${keys[index].replace(/\s/g, '')} name=${keys[index]} value=2><label for=${keys[index]}> ${keys[index]}</label><br></div>`;
       }
-      content += '<div id="buttonWrapper"><button id="submit" type="submit">Download Selected</button></div>';
+      content += '<div id="buttonWrapper"><button class="button" id="submit" type="submit">Download Selected</button></div>';
   
 
       document.getElementById("result").innerHTML = content;
