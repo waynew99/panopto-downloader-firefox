@@ -18,5 +18,8 @@
   },
   "permissions": [
     "downloads"
-  ]
+  ],
+  "icons": {
+    "128": "logo.png"
+  }
 }
