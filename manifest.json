@@ -1,6 +1,6 @@
 {
-  "name": "Panopto downloader",
-  "description": "Panopto downloader using RSS",
+  "name": "iPanopto",
+  "description": "Panopto video downloader",
   "version": "1.0",
   "manifest_version": 2,
   "content_scripts": [
@@ -20,6 +20,6 @@
     "downloads"
   ],
   "icons": {
-    "128": "logo_filled.png"
+    "128": "iPanopto.png"
   }
 }
