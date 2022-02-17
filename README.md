@@ -1,5 +1,9 @@
-# panopto-downloader
+# iPanopto - a Panopto video download Chrome extension
 
-This is a piece of code that downloads videos from Panopto using the RSS file.
+This is an extension that uses the RSS links found in the html code of Panopto pages to reach and download videos on Panopto.
 
-Objective changed. A chrome extension now.
+### Installation
+Download the folder that contains the files included in the extension, and add the folder to chrome using the load unpacked option under manage extensions.
+
+### Usage
+To use it, navigate to the folder with the list of videos and click on the extension to select the desired videos. 
