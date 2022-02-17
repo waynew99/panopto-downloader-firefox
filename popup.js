@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setContent(res) {
     document.getElementById("loadScreen").innerHTML = "";
 
-    if (res == "No RSS found" || res == "undefined") {
+    if (res == "No RSS found" || res == undefined) {
       document.getElementById("result").innerHTML = '<p style="margin-bottom: 0px">No videos found.</p><p style="margin-top: 9px">Please navigate to the Panopto folder page containing the videos that you want to download.</p>';
     } 
     
