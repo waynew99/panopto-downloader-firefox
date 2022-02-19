@@ -2,21 +2,17 @@
   "name": "iPanopto",
   "description": "Panopto video downloader",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "icons": {
     "128": "iPanopto.png"
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ]
+      "matches": [ "<all_urls>" ],
+      "js": [ "content.js" ]
     }
   ],
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html"
   },
   "permissions": [
